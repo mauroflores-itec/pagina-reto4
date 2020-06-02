@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Este es un sitio de producto genial">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Brand</title>
+
+  </head> 
+  <body>
+    <nav>
+      <div class="brand_image">
+        <img src="images/logo.png" alt="">
+      </div>
+      <div class="nav_options">
+        <ul>
+          <li><a href="index.html">Inicio</a>
+          <li><a href="productos.html">Productos</a>
+          <li><a href="faqs.html">Faqs</a></li>            
+          <li><a href="terminosCondiciones.html">Terminos y Condiciones</a>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Espacio entre navbar y container-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-4">
+          <div class="modulo_pago">
+            <div class="modulo_pago_images">
+              <img src="images/box2.png" alt="">
+            </div>
+            <h3>
+              Producto X
+            </h3>
+            <p>
+              Miles de productos hay en el mercado, pero nada como una caja con gatitos
+            </p>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="modulo_pago">
+          <form action="pagoconfirmado.html" method="post" onsubmit="return defaultagree(this)" name="agreeform" id="agreeform">
+
+              <p>Nombre:<input type="text" name="nombre"required/></p>
+              <p>Apellido:<input type="text" name="apellido"required/></p>
+              <p>Email:<input type="email" name="email"required/></p>
+              <textarea name="mensaje" placeholder="Deja tu mensaje aqui.." style="height:100px"></textarea>
+          
+          <input type="checkbox" onclick="agreesubmit(this)" name="agreecheck">Acepto los <a href="terminoscondiciones.html">términos y condiciones</a>
+          <input type="submit" disabled="disabled" value="Confirmar Pago"></a>
+      
+          </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <footer class="footer">
+      <p>Flores Mauro © Reto número 4</p>
+    </footer>
+
+  </body> 
+</html> 
+
+<script type="text/javascript">
+  var checkobj
+  function agreesubmit(el){
+  checkobj=el
+  if (document.all||document.getElementById){
+  for (i=0;i<checkobj.form.length;i++){
+  var tempobj=checkobj.form.elements[i]
+  if(tempobj.type.toLowerCase()=="submit")
+  tempobj.disabled=!checkobj.checked
+  }
+  }
+  }
+  function defaultagree(el){
+  if (!document.all&&!document.getElementById){
+  if (window.checkobj&&checkobj.checked)
+  return true
+  else{
+  alert("Por favor, lea y acepta los términos ")
+  return false
+  }
+  }
+  }
+  </script>
