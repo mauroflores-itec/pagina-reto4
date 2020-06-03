@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 /* -------------Variables */
 :root{
---green-color:#7ACC2D;
+--green-color:#28a745;
 --white-color:white;
 --black-color:#313337;
 /* Tipografía */
@@ -102,6 +102,8 @@ nav li a:hover{
   background-position: center top;
   padding:20%;
   display: flex;
+  width: 100%;
+  height: auto;
 }
 
 .contmsj{
